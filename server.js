@@ -1,12 +1,12 @@
 // let connection = require("./config/connection.js");
 let express = require("express");
 let bodyParser = require("body-parser");
-
 let exprHandbars = require("express-handlebars")
-
 let PORT = process.env.PORT || 8080;
-
 let app = express();
+
+let routes = require("./controllers/burgers__controller.js")
+
 
 //Provides static content from the "public" dir in app
 app.use(express.static("public"));
@@ -25,5 +25,6 @@ app.set("view engine", "handlebars");
 app.listen(PORT, () => {
   console.log("Server listening on: http://localhost " + PORT)
 });
+
 
 
