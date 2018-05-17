@@ -2,8 +2,8 @@ let orm = require("../config/orm.js")
 
 
 let burger = {
-    all: (cb) => {
-        orm.all("burgers", (res) => {
+    all: (searchQuery, cb) => {
+        orm.all(searchQuery, (res) => {
             cb(res);
         })
     }

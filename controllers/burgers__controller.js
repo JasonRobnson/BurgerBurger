@@ -3,13 +3,15 @@ let router = express.Router();
 let burger = require("../models/burger.js")
 
 router.get("/", (req, res ) => {
-    res.send("This is from the root route!")
+    // res.send("This is from the Root route!")
+    console.log("foobar")
     burger.all("burgers", (data) => {
         let HandbarsObj = {
-        burger: data
+        burgers: data
         };
-        console.log(HandBarsObj);
-        res.render("index",handBarsObj);
+        console.log(HandbarsObj);
+        console.log("!!!!!!")
+        res.render("index",HandbarsObj);
     });
 });
 

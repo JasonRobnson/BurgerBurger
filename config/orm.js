@@ -8,6 +8,7 @@ let orm = {
                 throw err;
              }
              console.log(result);
+             cb(result)
         })
     }
 }
