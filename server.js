@@ -1,7 +1,7 @@
 // let connection = require("./config/connection.js");
 let express = require("express");
 let bodyParser = require("body-parser");
-let exprHandbars = require("express-handlebars")
+let exprHandbars = require("express-handlebars");
 let PORT = process.env.PORT || 8080;
 let app = express();
 

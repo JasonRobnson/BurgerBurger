@@ -31,6 +31,7 @@
                 <img src="http://www.placepuppy.net/400/250" alt="Burger Puppy!">
         </div>
         <div class="col-md-4 text-center">
+            {{!-- This div will hold the burgers devoured query --}}
                     <h2>Burgers Ate!</h2>
                      {{#each burgers}}
                     <h6>{{burger_name}}<h6>
@@ -43,8 +44,8 @@
                              <div class="form-group form-group-lg text-center">
                                 <label class="col-md-6 control-label" for="formGroupInputLarge"> <h2>What's your creation</h2></label>
                                  <div class="col-md-12 text-center">
-                                <input class="form-control" type="text" id="formGroupInputLarge" placeholder="Creat your favorite burger here....">
-                                 <button type="submit" class="btn btn-default btn-sm btn-primary">Order</button>
+                                <input class="form-control" type="text" id="userBurgerInput" placeholder="Creat your favorite burger here....">
+                                 <button type="submit" id="userOrderButton" class="btn btn-default btn-sm btn-primary">Order</button>
                                 </div>
                              </div>
                 </form>
@@ -53,7 +54,32 @@
     </div>
 
  </div>
+            <script>
+                        $(document).ready(() => {
+                          orderButtonEvent();
+                
+                        });
 
+                        let orderButtonEvent = () => {
+                            $("#userOrderButton").on("click", (e) => {
+                               e.preventDefault();
+                               let newBurger = $("#userBurgerInput").val().trim();
+                               console.log(newBurger);
+                               let url = window.location.origin;
+                               $.post(url + "/api/burgers", newBurger, (data) => {
+                                    alert("Info has been Sent!")
+                               })
+
+                            })
+                        }
+
+                    
+
+
+                    
+
+
+            </script>
 
 
     

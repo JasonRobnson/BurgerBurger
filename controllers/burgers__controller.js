@@ -15,6 +15,18 @@ router.get("/", (req, res ) => {
     });
 });
 
+router.post("/api/burgers", (req, res) => {
+    console.log(req.body)
+    // burger.create([
+    //    console.log(req.body.newBurger)
+    // ], (result) => {
+    //     console.log("Ring Ring!")
+    // })
+    // console.log("API ")
+    // res.send("This is the api/burger ROUTE");
+   
+})
+
 
 
 module.exports = router;
