@@ -1,0 +1,27 @@
+/* font-family: 'Permanent Marker', cursive;
+font-family: 'Courgette', cursive; */
+/* 
+Primary Red: #f06292
+Primary Dark: #ba2d65
+Primary Light:#ff94c2
+
+Secondary: #ffff8d
+Secondary Dark: #cacc5d
+Secondary Light: #ffffbf */
+
+/* %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%% */
+
+
+body {
+    /* background-image: url("../assets/food.png"); */
+    background-color: coral;
+    
+}
+
+h2 {
+    font-family: 'Courgette', cursive;
+}
+
+h1, h6 {
+    font-family: 'Permanent Marker', cursive;
+}

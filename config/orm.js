@@ -1,5 +1,7 @@
 let connection = require("./connection.js");
 
+
+//Object Relational Mapping  for this app 
 let orm = {
     all: (searchQuery, cb) => {
         let queryString = "SELECT * FROM "+ searchQuery + ";"
@@ -7,7 +9,6 @@ let orm = {
              if(err) {
                 throw err;
              }
-             console.log(result);
              cb(result)
         })
     },
@@ -18,7 +19,6 @@ let orm = {
                 if (err) {
                     throw err;
                 }
-                console.log(result);
                 cb(result)
             })
         },
@@ -30,7 +30,6 @@ let orm = {
                 if (err) {
                     throw err;
                 }
-                console.log(result);
                 cb(result)
             })
         }
@@ -44,5 +43,3 @@ let orm = {
 
 
 module.exports = orm;
-
-console.log("This is from the ORM module");
