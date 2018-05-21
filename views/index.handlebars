@@ -20,10 +20,13 @@
         <div class="row">
             <div class="col-md-4 text-center">
                         <h2>Burgers on Deck</h2>
+                
                     {{#each burgers}}
-                    <h6>{{burger_name}}<h6>
+                    {{#unless this.devoured}}
+                   <h6> {{burger_name}}  </h6><button class="btn btn-sm" id="eatBurger">Eat Me!</button>
+                   {{/unless}}
                     {{/each}}
-                   
+                
 
             </div>
        
@@ -57,6 +60,7 @@
             <script>
                         $(document).ready(() => {
                           orderButtonEvent();
+                          eatDaBurger();
                 
                         });
 
@@ -68,9 +72,16 @@
                                console.log(newBurger);
                                let url = window.location.origin;
                                $.post(url + "/api/burgers", newBurger, (data) => {
-                                    alert("Info has been Sent!")
+                                    location.reload();
                                })
 
+                            })
+                        }
+
+                        let eatDaBurger = () => {
+                            $("#eatBurger").on("click",() => {
+                                alert("You clicked Eat Da Burger!")
+                                location.reload();
                             })
                         }
 

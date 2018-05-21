@@ -11,7 +11,13 @@ let burger = {
         orm.create("burgers", burgerName, (res) => {
             cb(res);
         })    
+     },
+    update: (toggleEaten, cb) => {
+        orm.update("burgers", toggleEaten, (res) => {
+            cb(res);
+        })
      }
+    
     
 };
 
