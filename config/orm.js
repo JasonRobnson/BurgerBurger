@@ -13,16 +13,21 @@ let orm = {
     },
       
         create: (tableName, burgerName, cb) => {
-            let queryString = `INSERT INTO ${tableName} VALUES (burger_name, devoured) VALUES ("${burgerName}", False);`
+            let queryString = `INSERT INTO ${tableName} (burger_name, devoured) VALUES ("${burgerName}", False);`
+            connection.query(queryString, (err,result) => {
+                if (err) {
+                    throw err;
+                }
+                console.log(result);
+                cb(result)
+            })
+        },
+         
+        update: (tableName, toggleEaten) => {
+            let queryString = `UPDATE ${tableName} SET ${toggleEaten} WHERE devoured = False;`
             console.log(queryString)
         }
-        // connection.query(queryString, (err, result) => {
-        //     if(err) {
-        //         throw err;
-        //     }
-        //     console.log(result);
-        //     cb(result)
-        // })
+
       };
 
     

@@ -13,8 +13,12 @@ router.get("/", (req, res ) => {
 });
 
 router.post("/api/burgers", (req, res) => {
-        console.log(req.body.burger_name)
-})
+
+    burger.create( req.body.burger_name, (data) => {
+       res.json(data.insertId);
+    })
+ });
+      
 
 
 
