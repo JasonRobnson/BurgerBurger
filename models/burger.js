@@ -14,7 +14,7 @@ let burger = {
      },
     update: (toggleEaten, cb) => {
         orm.update("burgers", toggleEaten, (res) => {
-            cb(res);
+    
         })
      }
     

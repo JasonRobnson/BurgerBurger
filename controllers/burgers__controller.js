@@ -19,8 +19,9 @@ router.post("/api/burgers", (req, res) => {
     })
  });
 router.post("/api/devour",(req, res) =>{
-   console.log(req.body.burgerType)
+   console.log(req.body.burgerType + "This from Update burgerController")
     burger.update(req.body.burgerType);
+    res.redirect("/")
 })
 
 

@@ -23,9 +23,16 @@ let orm = {
             })
         },
          
-        update: (tableName, burgerName, cb) => {
-            let queryString = `UPDATE ${tableName} SET ${burgerName} WHERE devoured = False;`
-            console.log(queryString)
+        update: (tableName, burgerId, cb) => {
+            let queryString = `UPDATE ${tableName} SET devoured=True WHERE id=${burgerId};`
+            console.log(queryString);
+            connection.query(queryString, (err, result) => {
+                if (err) {
+                    throw err;
+                }
+                console.log(result);
+                cb(result)
+            })
         }
 
       };
