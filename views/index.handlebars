@@ -23,7 +23,13 @@
                 
                     {{#each burgers}}
                         {{#unless this.devoured}}
-                             <h6> {{burger_name}}  </h6><button class="btn btn-sm" id="eatBurger">Eat Me!</button>
+                             <h6> {{burger_name}}  </h6>
+                              <div class="col-xs-3 text-center">
+                                     <form action="/api/devour" method="post">
+                                        <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+                                        <button type="submit" class="btn-xs btn-default">SMASH IT!</button>
+                                     </form>
+                                 </div>
                          {{/unless}}
                     {{/each}}
                 
@@ -38,7 +44,7 @@
                     <h2>Burgers Ate!</h2>
                      {{#each burgers}}
                          {{#if this.devoured}}
-                             <h6>{{burger_name}}<h6>
+                             <h6>{{burger_name}}<h6>       
                         {{/if}}
                     {{/each}}
         </div>
@@ -88,7 +94,7 @@
                         }
 
                     
-
+// <button method="POST" action="/burgers/update?_method=PUT" class="btn btn-sm" id="eatBurger">Eat Me!</button>
 
                     
 
