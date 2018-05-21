@@ -63,7 +63,9 @@
                         let orderButtonEvent = () => {
                             $("#userOrderButton").on("click", (e) => {
                                e.preventDefault();
-                               let newBurger = $("#userBurgerInput").val().trim();
+                               let newBurger = {
+                                   burger_name: $("#userBurgerInput").val().trim()
+                               } 
                                console.log(newBurger);
                                let url = window.location.origin;
                                $.post(url + "/api/burgers", newBurger, (data) => {
