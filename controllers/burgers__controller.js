@@ -18,7 +18,7 @@ router.post("/api/burgers", (req, res) => {
        res.json(data.insertId);
     })
  });
-routher.post("/api/devour",(req, res) =>{
+router.post("/api/devour",(req, res) =>{
     burger.update();
 })
 

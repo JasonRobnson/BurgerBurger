@@ -22,9 +22,9 @@
                         <h2>Burgers on Deck</h2>
                 
                     {{#each burgers}}
-                    {{#unless this.devoured}}
-                   <h6> {{burger_name}}  </h6><button class="btn btn-sm" id="eatBurger">Eat Me!</button>
-                   {{/unless}}
+                        {{#unless this.devoured}}
+                             <h6> {{burger_name}}  </h6><button class="btn btn-sm" id="eatBurger">Eat Me!</button>
+                         {{/unless}}
                     {{/each}}
                 
 
@@ -37,7 +37,9 @@
             {{!-- This div will hold the burgers devoured query --}}
                     <h2>Burgers Ate!</h2>
                      {{#each burgers}}
-                    <h6>{{burger_name}}<h6>
+                         {{#if this.devoured}}
+                             <h6>{{burger_name}}<h6>
+                        {{/if}}
                     {{/each}}
         </div>
     </div>
