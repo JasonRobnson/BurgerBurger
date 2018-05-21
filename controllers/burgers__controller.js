@@ -19,7 +19,8 @@ router.post("/api/burgers", (req, res) => {
     })
  });
 router.post("/api/devour",(req, res) =>{
-    burger.update();
+   console.log(req.body.burgerType)
+    burger.update(req.body.burgerType);
 })
 
 

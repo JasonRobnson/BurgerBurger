@@ -23,8 +23,8 @@ let orm = {
             })
         },
          
-        update: (tableName, toggleEaten) => {
-            let queryString = `UPDATE ${tableName} SET ${toggleEaten} WHERE devoured = False;`
+        update: (tableName, burgerName, cb) => {
+            let queryString = `UPDATE ${tableName} SET ${burgerName} WHERE devoured = False;`
             console.log(queryString)
         }
 

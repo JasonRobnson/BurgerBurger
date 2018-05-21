@@ -26,7 +26,8 @@
                              <h6> {{burger_name}}  </h6>
                               <div class="col-xs-3 text-center">
                                      <form action="/api/devour" method="post">
-                                        <input type="hidden" name="burger_id" type="text" value={{this.id}}>
+                                        {{!-- <pre>{{this.id}}. {{this.burger_name}}</pre> --}}
+                                        <input type="hidden" name="burgerType" type="text" value={{this.burger_name}}>
                                         <button type="submit" class="btn-xs btn-default">SMASH IT!</button>
                                      </form>
                                  </div>
