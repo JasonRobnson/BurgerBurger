@@ -1,5 +1,6 @@
 let orm = require("../config/orm.js")
 
+//The place to define data structures and methods to interact with your data store.
 
 let burger = {
     all: (searchQuery, cb) => {
@@ -12,8 +13,8 @@ let burger = {
             cb(res);
         })    
      },
-    update: (toggleEaten, cb) => {
-        orm.update("burgers", toggleEaten, (res) => {
+    update: (burgerId, cb) => {
+        orm.update("burgers", burgerId, (res) => {
     
         })
      }
