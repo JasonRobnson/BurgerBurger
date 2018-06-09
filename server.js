@@ -17,8 +17,9 @@ app.use(bodyParser.urlencoded({extended: true}));
 app.use(bodyParser.json());
 
 //lays out default view for handlebars 
-app.engine("handlebars", exprHandbars({ defaultLayout: "main"}));
 app.set("view engine", "handlebars");
+app.engine("handlebars", exprHandbars({ defaultLayout: "main"}));
+
 app.use(routes);
 
 
