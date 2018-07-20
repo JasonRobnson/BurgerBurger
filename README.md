@@ -1,18 +1,17 @@
 
-# ProPublica Scrapper [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
- This app uses Axios a browser based HTTP client to access
- content upon ProPublica's webpage. This content is then
- manipulated and displayed to the user.
+# Burger Burger [![Build Status](https://img.shields.io/travis/npm/npm/latest.svg?style=flat-square)](https://travis-ci.org/npm/npm) [![npm](https://img.shields.io/npm/v/npm.svg?style=flat-square)](https://www.npmjs.com/package/npm) [![PRs Welcome](https://img.shields.io/badge/PRs-welcome-brightgreen.svg?style=flat-square)](http://makeapullrequest.com) [![GitHub license](https://img.shields.io/badge/license-MIT-blue.svg?style=flat-square)](https://github.com/your/your-project/blob/master/LICENSE)
+ This app uses a MySQL database that performs CRUD functions
+ between the User and the Server.
 
 ## Problem solved
-1. How to access different content across a variety of sites
-  without actually having to physically visit each site.
-2. How to store data without creating redundant enteries.
-3. How do we allow the user to attach comments/likes to data.
+1. Capturing user inputs from forms. 
+2. Reading user data from forms thats stored upon DB.
+3. Updating user data from forms.
+4. Delete user data stored on user DB. 
 
 ## Deployed Site
 ![alt text](./public/Assets/img/BurgerTime2.PNG "Burger Burger App Picture")
-[Deployed App](https://sleepy-dawn-98220.herokuapp.com/)
+[Deployed App](https://blooming-temple-83081.herokuapp.com/)
 
 # Tools
 - Node.js
