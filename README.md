@@ -11,7 +11,7 @@
 3. How do we allow the user to attach comments/likes to data.
 
 ## Deployed Site
-![alt text](./public/Assets/img/burgertime2.PNG "Burger Burger App Picture")
+![alt text](./public/Assets/img/BurgerTime2.PNG "Burger Burger App Picture")
 [Deployed App](https://sleepy-dawn-98220.herokuapp.com/)
 
 # Tools
